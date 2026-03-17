@@ -73,3 +73,8 @@ if user_input:
 
     with st.chat_message("assistant"):
         st.markdown(response)
+
+
+# Streamlit chosen because:
+# PMs can run locally without frontend engineering
+# Conversation history helps test whether stage logic feels natural over multiple turns
