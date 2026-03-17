@@ -129,3 +129,10 @@ def bot_reply(user_input, stage):
         )
 
     return ("Dobara batayiye sir.", stage)
+
+# VERSION 1:
+# Earlier bot moved linearly and repeated stage prompts.
+
+# VERSION 2:
+# Objections can interrupt at any stage.
+# This makes prototype closer to real renewal behavior.
