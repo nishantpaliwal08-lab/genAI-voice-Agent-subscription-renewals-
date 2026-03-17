@@ -1,0 +1,28 @@
+# Subscription Renewal Business Flow
+
+A typical GPS renewal call happens after the existing plan is near expiry or has already expired.
+
+The outbound caller usually works through a lightweight persuasion flow:
+
+1. establish company identity
+2. remind customer of active/expired GPS plan
+3. propose renewal plan
+4. respond to objection
+5. attempt closure or callback
+
+The most common business outcomes are:
+
+* yearly renewal accepted
+* cheaper validity requested
+* customer delays decision
+* customer refuses renewal
+
+The operational challenge is that most objections are repetitive:
+
+* price feels high
+* service dissatisfaction
+* vehicle not active
+* GPS not needed currently
+* renewal deferred for later
+
+Because the objection space is repetitive, even a simple prototype can demonstrate meaningful conversational intelligence.
