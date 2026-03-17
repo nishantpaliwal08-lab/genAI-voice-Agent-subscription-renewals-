@@ -96,3 +96,7 @@ def retrieve_objection(query):
 # ---------------- Seed at Startup ----------------
 
 seed_data()
+
+# Why local embeddings:
+# keeps prototype fully runnable on local machine
+# avoids cloud dependency during PM experimentation
