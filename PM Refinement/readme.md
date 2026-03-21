@@ -1,37 +1,75 @@
 # PM Refinement
 
-A first working prototype is usually easy to generate.
+A working prototype is not the end of conversational design.
 
-A usable prototype requires PM intervention.
+It is the beginning of refinement.
 
-This repository intentionally separates:
+Most AI-generated or first-pass prototypes appear functional but fail under realistic interaction.
 
-AI-generated draft
-from
-PM-refined version
-
-because most meaningful quality gains happen after first draft.
+The role of a product manager is to identify where the conversation feels unnatural, unstable, or misaligned with business intent.
 
 ---
 
-## What PM refinement changed in this prototype
+## What refinement means in this context
 
-Examples:
+Refinement is not about improving language quality.
 
-* reduced unnecessary conversational branching
-* fixed unnatural repetition
-* introduced fallback offer only when customer signals price sensitivity
-* allowed objections to interrupt any stage
+It is about improving **behavior under real user input**.
+
+This includes:
+
+* handling interruptions
+* avoiding repetitive responses
+* controlling when offers are made
+* maintaining flow despite deviations
+
+---
+
+## Where first draft typically fails
+
+Initial prototypes often:
+
+* assume linear conversation flow
+* ignore mid-stage interruptions
+* repeat the same plan pitch
+* respond weakly to objections
+
+These failures are not model issues.
+
+They are design issues.
+
+---
+
+## What was refined in this prototype
+
+The prototype was updated to better reflect real renewal behavior:
+
+* objections can interrupt any stage
+* fallback plan appears only after price resistance
+* stage progression does not reset unnecessarily
+* responses avoid repeating identical phrasing
 
 ---
 
 ## Why this matters
 
-Without refinement, prototypes often look intelligent but behave unnaturally.
+Without refinement, a prototype may look intelligent in isolation.
 
-PM refinement usually improves:
+But in multi-turn interaction, it breaks quickly.
+
+Refinement improves:
 
 * realism
 * control
-* teachability
-* demo stability
+* predictability
+* demo reliability
+
+---
+
+## PM takeaway
+
+AI can generate a working system.
+
+But only a PM can make it usable.
+
+The difference lies in observing where real behavior diverges from expected flow, and correcting for it.
