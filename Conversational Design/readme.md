@@ -1,35 +1,93 @@
-# Conversation Design
+# Conversational Design
 
-The core challenge in conversational AI is not prompt writing.
+Most conversational AI failures do not come from model limitations.
 
-It is identifying how human conversations naturally move across repeatable stages.
+They come from weak understanding of how real human conversations are structured.
 
-For GPS renewals, multiple calls showed that even when wording changes, the structure remains narrow.
+Before writing any prompts or code, a product manager must first answer:
 
-A lightweight prototype therefore does not need full conversational freedom.
-
-It needs a small number of stable transitions.
+What is the repeatable structure behind these conversations?
 
 ---
 
-## Stage model used in this prototype
+## Why conversational design matters
 
-1. Opening
-2. Renewal Reminder
-3. Plan Offer
-4. Objection Handling
-5. Closure
+In the GPS renewal use case, conversations appear flexible on the surface.
+
+Different customers use different words.
+Agents use slightly different phrasing.
+
+However, underneath that variation, the structure is highly repetitive.
+
+Almost every call follows a narrow pattern:
+
+* greeting
+* renewal reminder
+* plan explanation
+* objection
+* closure attempt
+
+If this structure is not made explicit, the system either:
+
+* becomes too rigid (scripted bot)
+* or too unpredictable (free LLM)
 
 ---
 
-## Why this matters
+## What this prototype does differently
 
-The renewal script used by human callers already follows a narrow progression:
+Instead of starting with prompts or models, this prototype starts with:
 
-* identify customer
-* mention due renewal
-* suggest plan
-* answer hesitation
-* attempt closure
+**stage abstraction**
 
-This makes GPS renewals a strong first prototype use case because conversational variability is limited compared to open sales conversations.
+The goal is not to capture every sentence.
+
+The goal is to capture:
+
+what type of conversational move is happening
+
+---
+
+## Core design decision
+
+We reduce conversation into a small number of stages:
+
+* Opening
+* Renewal Reminder
+* Plan Offer
+* Objection Handling
+* Closure
+
+This is a simplification.
+
+Real conversations are messier.
+
+But early prototypes benefit from **controlled simplification**.
+
+---
+
+## Where PM judgement enters
+
+AI can help extract patterns from transcripts.
+
+But it cannot decide:
+
+* which stages are operationally meaningful
+* which variations can be ignored
+* how much complexity should be removed
+
+These decisions directly affect:
+
+* stability of prototype
+* realism of interaction
+* ease of iteration
+
+---
+
+## Key takeaway
+
+Conversational AI should not begin with models.
+
+It should begin with:
+
+**understanding how humans already solve the problem repeatedly**
